@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
+  Image,
   Alert,
   KeyboardAvoidingView,
   Linking,
@@ -985,9 +986,12 @@ function Campus() {
         style={[s.header, { backgroundColor: c.card, borderColor: c.line }]}
       >
         <View style={s.row}>
-          <View style={s.brand}>
-            <Ionicons name="school" size={21} color="#fff" />
-          </View>
+          <Image
+            source={require("./assets/logo.png")}
+            style={s.brand}
+            resizeMode="contain"
+            accessibilityLabel="Inspire Campus 로고"
+          />
           <View>
             {txt("inspire campus", {
               fontSize: 17,
@@ -1270,7 +1274,6 @@ const s = StyleSheet.create({
   brand: {
     width: 38,
     height: 38,
-    backgroundColor: "#4f46e5",
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
