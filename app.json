@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Inspire Campus",
+    "slug": "inspire-campus",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.inspire.campus" },
+    "android": { "package": "com.inspire.campus" },
+    "web": { "bundler": "metro" }
+  }
+}
