@@ -990,13 +990,14 @@ function Campus() {
             source={require("./assets/logo.png")}
             style={s.brand}
             resizeMode="contain"
-            accessibilityLabel="Inspire Campus 로고"
+            accessibilityLabel="NEURON 로고"
           />
           <View>
-            {txt("inspire campus", {
-              fontSize: 17,
-              fontWeight: "800",
-              letterSpacing: -0.5,
+            {txt("NEURON", {
+              color: "#6D4AE0",
+              fontSize: 18,
+              fontWeight: "900",
+              letterSpacing: 0.8,
             })}
             {muted("LG CNS AM Inspire Camp")}
           </View>
