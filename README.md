@@ -29,7 +29,7 @@ npm start
 - AI 복습: 입력 노트 기반 로컬 요약 데모, 3문항 퀴즈, 정답 해설
 - 마이페이지: 출결/수당/AWS 더미정보, 테마 변경, 데이터 초기화
 
-과제/질문/테마는 AsyncStorage에 저장됩니다. AI 요약, 소명은 로컬 데모이며 실제 AI나 행정 시스템을 호출하지 않습니다. 강의실/자료 버튼은 기존 frontend의 예시 URL을 사용하므로 실제 콘텐츠가 없을 수 있습니다.
+과제/질문/테마는 AsyncStorage에 저장됩니다. AI 요약, 소명은 로컬 데모이며 실제 AI나 행정 시스템을 호출하지 않습니다. ZEP 강의실 버튼은 `https://zep.us/@lgam06`, 자리이탈감지 버튼은 `https://lms.wsts.kr/detection/student?classId=114`를 기기 브라우저로 엽니다. 강의자료는 기존 frontend의 예시 URL을 사용합니다.
 
 ## 반응형
 
