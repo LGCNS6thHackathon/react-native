@@ -224,8 +224,9 @@ function Campus() {
       </Text>
     </Pressable>
   );
-  const card = (children: React.ReactNode, style?: any) => (
+  const card = (children: React.ReactNode, style?: any, key?: React.Key) => (
     <View
+      key={key}
       style={[s.card, { backgroundColor: c.card, borderColor: c.line }, style]}
     >
       {children}
@@ -377,7 +378,7 @@ function Campus() {
               marginVertical: 8,
               color: item.color,
             })}
-            {item.progress && (
+            {item.progress !== undefined && (
               <View style={[s.track, { backgroundColor: c.soft }]}>
                 <View
                   style={{
@@ -401,7 +402,7 @@ function Campus() {
       )}
       {card(
         <>
-          {heading("오늘의 타임라인")}{" "}
+          {heading("오늘의 타임라인")}
           {[
             "09:00 – 10:00|해커톤 킥오프 & 기획안 리뷰",
             "10:00 – 16:30|팀별 프로토타이핑 & 멘토 코칭",
@@ -595,7 +596,7 @@ function Campus() {
                   {muted(a.feedback.comment)}
                 </View>
               )}
-              {a.submissionDate && muted(`제출 일시 ${a.submissionDate}`)}
+              {!!a.submissionDate && muted(`제출 일시 ${a.submissionDate}`)}
               {button(
                 a.status === "미제출" ? "과제 제출하기" : "제출 내용 수정",
                 () => {
@@ -607,6 +608,7 @@ function Campus() {
               )}
             </>,
             { marginBottom: 16 },
+            a.id,
           ),
         )}
     </>
@@ -675,6 +677,7 @@ function Campus() {
               {muted(`답변 ${q.answers.length}  ·  조회 ${q.views}`)}
             </Pressable>,
             { marginBottom: 14 },
+            q.id,
           ),
         )}
       {questions.filter(
@@ -725,6 +728,7 @@ function Campus() {
             </View>
           </>,
           { marginBottom: 16 },
+          e.id,
         ),
       )}
     </>
